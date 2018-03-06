@@ -4,6 +4,6 @@ RSpec.describe Binary do
   end
 
   it "takes an integer and returns a binary representation" do
-    expect(described_class::Binary.binary(7)).to eq("111")
+    expect(Binary.binary(7)).to eq("111")
   end
 end
