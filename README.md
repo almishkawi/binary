@@ -32,6 +32,12 @@ Binary.binary(2018)
 ```
 Output: `"11111100010"`.
 
+Also you can pass an array of integers to the method to get an array of their binary values.
+```ruby
+Binary.binary([26,6,1991])
+```
+Output: `["11010", "110", "11111000111"]`.
+
 ## Development
 
 ...
