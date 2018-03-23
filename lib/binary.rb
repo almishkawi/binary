@@ -27,4 +27,12 @@ module Binary
     binary = binary(num) if num
     binary.count("1")
   end
+
+  def self.prime num
+    binaries = []
+    Prime.each(num) do |prime|
+      binaries << binary(prime)
+    end
+    binaries
+  end
 end
