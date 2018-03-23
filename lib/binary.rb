@@ -12,4 +12,19 @@ module Binary
       nil
     end
   end
+
+  def self.bits num
+    binary = binary(num) if num
+    binary.length
+  end
+
+  def self.zeros num
+    binary = binary(num) if num
+    binary.count("0")
+  end
+
+  def self.ones num
+    binary = binary(num) if num
+    binary.count("1")
+  end
 end
