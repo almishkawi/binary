@@ -18,4 +18,20 @@ RSpec.describe Binary do
   it "each non-integer element in the array input should return nil" do
     expect(Binary.binary(['one','two',3])).to eq([nil, nil, "11"])
   end
+
+  it "takes an integer and returns number of bits in its binary representation" do
+    expect(Binary.bits(7)).to eq(3)
+  end
+
+  it "takes an integer and returns number of ones in its binary representation" do
+    expect(Binary.ones(7)).to eq(3)
+  end
+
+  it "takes an integer and returns number of zeros in its binary representation" do
+    expect(Binary.ones(9)).to eq(2)
+  end
+
+  it "takes an input number and returns an array of binaires of all prime numbers from 2 up to the given input" do
+    expect(Binary.prime(9)).to eq(["10", "11", "101", "111"])
+  end
 end
