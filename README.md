@@ -1,6 +1,6 @@
 # Binary
 
-Very simple gem to convert an integer into a binary representation
+Simple Ruby gem to convert integers into binaries and binaries into integers
 
 ## Installation
 
@@ -38,7 +38,7 @@ Binary.binary([[7,9,11])
 ```
 `Output: ["111", "1001", "1011"]`.
 
-You can also convert binaries to integers by calling `number` method as follows:
+You can also convert binaries into integers by calling method `number` as follows:
 ```ruby
 Binary.number "11111100010"
 ```
