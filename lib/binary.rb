@@ -51,9 +51,8 @@ module Binary
   end
 
   def self.method_missing(method, *args, &block)
-    puts "There is no method called #{method} in Binary."
-    p 'methods available are:'
-    ['binary', 'number', 'bit', 'zeros', 'ones', 'prime'].each { |m| p "#{m}" }
-    nil
+    puts "There's no method #{method} found in Binary module."
+    puts 'Methods available are:'
+    puts (Binary.methods - Object.methods)
   end
 end
