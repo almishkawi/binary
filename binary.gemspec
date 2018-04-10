@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name                  = "binary"
   spec.version               = Binary::VERSION
   spec.authors               = ["Mo Almishkawi"]
-  spec.email                 = ["mo@almishkawi.me"]
+  spec.email                 = ["mo.almishkawi@gmail.com"]
   spec.required_ruby_version = '~> 2.0'
 
-  spec.summary               = "Convert a number into a binary or convert a binary into a number"
-  spec.description           = "Takes integers and returns binaries or takes binaries and returns numbers and some other methods"
+  spec.summary               = "Convert numbers into binaries and binaries into numbers"
+  spec.description           = "Convert numbers into binaries and binaries into numbers"
   spec.homepage              = ""
   spec.license               = "MIT"
 
