@@ -29,27 +29,44 @@ Then to get the binary representation of a number, you just need to call `Binary
 
 ```ruby
 Binary.binary 2018
+
+Or
+
+2018.to_b
 ```
 `Output: "11111100010"`.
 
 Also you can pass an array of integers to the method to get an array of their binary values.
 ```ruby
 Binary.binary([[7,9,11])
+
+Or
+
+[7,9,11].to_b
 ```
 `Output: ["111", "1001", "1011"]`.
 
 You can also convert binaries into integers by calling method `number` as follows:
 ```ruby
 Binary.number "11111100010"
+
+Or
+
+"11111100010".to_num
 ```
 `Output: 2018`.
 
 ```ruby
 Binary.number(["111", "1001", "1011"])
+
+Or
+
+["111", "1001", "1011"].to_num
+
 ```
 `Output: [7,9,11]`.
 
-Other methods you can use:
+Other methods available:
 
 ```ruby
 # number of bits in a number's binary
