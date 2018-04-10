@@ -53,6 +53,6 @@ module Binary
   def self.method_missing(method, *args, &block)
     puts "There's no method #{method} found in Binary module."
     puts 'Methods available are:'
-    puts (Binary.methods - Object.methods)
+    puts (Binary.methods - Object.methods - [:method_missing])
   end
 end
