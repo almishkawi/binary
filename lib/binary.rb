@@ -1,5 +1,7 @@
-require "binary/version"
-require "prime"
+
+require_relative 'binary/extensions.rb'
+require 'binary/version'
+require 'prime'
 
 module Binary
   def self.binary(input=nil)
