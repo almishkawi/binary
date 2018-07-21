@@ -1,59 +1,49 @@
-
 require_relative 'binary/extensions.rb'
 require 'binary/version'
 require 'prime'
 
 module Binary
-  def self.binary(input=nil)
-    if input.class == Array
-      input.map { |num| num.class == Integer ? num.abs.to_s(2) : nil }
-    elsif input.class == Integer
-      input = input.abs if input < 0
-      input.to_s(2)
-    else
-      nil
-    end
+  def self.binary(i=nil)
+    return nil if block_given?
+    return i.map { |n| n.class == Integer ? n.abs.to_s(2) : nil } if array? i
+    i = i.abs if i.to_i < 0
+    return i.to_s(2) if i.class == Integer
+    nil
   end
 
-  def self.number(input=nil)
-    if input.class == Array
-      input.map { |num| num.class == String ? num.to_i(2) : nil }
-    elsif input.class == String
-      input.to_i(2)
-    else
-      nil
-    end
+  def self.number(i=nil)
+    return i.map { |n| n.class == String ? n.to_i(2) : nil } if array? i
+    return i.to_i(2) if i.class == String
+    nil
+  end
+
+  def self.array?(i)
+  	i.class == Array
   end
 
   def self.bits num=nil
     return nil unless num
-    binary = binary(num)
-    binary.length
+    binary(num).length
   end
 
   def self.zeros num=nil
     return nil unless num
-    binary = binary(num)
-    binary.count("0")
+    binary(num).count("0")
   end
 
   def self.ones num=nil
     return nil unless num
-    binary = binary(num)
-    binary.count("1")
+    binary(num).count("1")
   end
 
   def self.prime num=nil
     return nil unless num
     binaries = []
-    Prime.each(num) do |prime|
-      binaries << binary(prime)
-    end
-    binaries
+    binaries = Prime.each(num) { |prime| binaries << binary(prime) }
   end
 
   def self.method_missing(method, *args, &block)
-    puts "There's no method #{method} found in Binary module."
+    puts "No method was found with the name #{method}."
     puts 'Methods available are:'
     puts (Binary.methods - Object.methods - [:method_missing])
   end

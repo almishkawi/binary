@@ -1,6 +1,6 @@
 # Binary
 
-Simple Ruby gem to convert integers into binaries and binaries into integers
+Simple Ruby gem to convert numbers into binaries & binaries into numbers
 
 ## Installation
 
@@ -10,22 +10,21 @@ Add this line to your application's Gemfile:
 gem 'binary'
 ```
 
-And then execute:
+Then run:
 
     $ bundle
 
-Or install it yourself as:
+Or from the terminal:
 
     $ gem install binary
 
 ## Usage
-Simply require the gem in your code:
 
 ```ruby
 require 'binary'
 ```
 
-Then to get the binary representation of a number, you just need to call `Binary.binary` and pass the number to it, something like follows:
+Binary to number:
 
 ```ruby
 Binary.binary 2018
@@ -36,7 +35,7 @@ Or
 ```
 `Output: "11111100010"`.
 
-Also you can pass an array of integers to the method to get an array of their binary values.
+Array of numbers to binaries.
 ```ruby
 Binary.binary([[7,9,11])
 
@@ -46,7 +45,7 @@ Or
 ```
 `Output: ["111", "1001", "1011"]`.
 
-You can also convert binaries into integers by calling method `number` as follows:
+Number to binary:
 ```ruby
 Binary.number "11111100010"
 
@@ -56,6 +55,7 @@ Or
 ```
 `Output: 2018`.
 
+Array of binaries to numbers:
 ```ruby
 Binary.number(["111", "1001", "1011"])
 
@@ -71,30 +71,29 @@ Other methods available:
 ```ruby
 # number of bits in a number's binary
 Binary.bits 1000
+# number of bits in 1000.to_b ("1111101000")
 ```
 `Output: 10`.
 
 ```ruby
 # number of ones in a number's binary
 Binary.ones 1000
+# number of ones in 1000.to_b ("1111101000")
 ```
 `Output: 6`.
 
 ```ruby
 # number of zeros in a number's binary
 Binary.zeros 1000
+# number of ones in 1000.to_b ("1111101000")
 ```
 `Output: 4`.
 
 ```ruby
-# get array of binaries of all prime numbers between 2 and the given number
+# list of binaries of prime numbers from 2 to 25
 Binary.prime 25
 ```
 `Output: ["10", "11", "101", "111", "1011", "1101", "10001", "10011", "10111"]`.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/almishkawi/binary.
 
 ## License
 
