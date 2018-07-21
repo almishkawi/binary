@@ -36,10 +36,10 @@ RSpec.describe Binary do
   end
 
   it "takes an integer and returns number of zeros in its binary representation" do
-    expect(Binary.ones(9)).to eq(2)
+    expect(Binary.zeros(9)).to eq(2)
   end
 
-  it "takes an input number and returns an array of binaires of all prime numbers from 2 up to the given input" do
+  it "takes a number and returns an array of binaires of prime numbers" do
     expect(Binary.prime(9)).to eq(["10", "11", "101", "111"])
   end
 end
