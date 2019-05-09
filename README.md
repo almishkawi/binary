@@ -69,22 +69,22 @@ Or
 Other methods available:
 
 ```ruby
-# number of bits in a number's binary
-Binary.bits 1000
+# count the number of bits in a number's binary
+Binary.bits_count 1000
 # number of bits in 1000.to_b ("1111101000")
 ```
 `Output: 10`.
 
 ```ruby
-# number of ones in a number's binary
-Binary.ones 1000
+# count the "1"s in a number's binary
+Binary.ones_count 1000
 # number of ones in 1000.to_b ("1111101000")
 ```
 `Output: 6`.
 
 ```ruby
-# number of zeros in a number's binary
-Binary.zeros 1000
+# count the "0"s in a number's binary
+Binary.zeros_count 1000
 # number of zeros in 1000.to_b ("1111101000")
 ```
 `Output: 4`.
@@ -94,6 +94,12 @@ Binary.zeros 1000
 Binary.prime 25
 ```
 `Output: ["10", "11", "101", "111", "1011", "1101", "10001", "10011", "10111"]`.
+
+```ruby
+# Binary representation of a random number between 1 and 100
+Binary.random 100
+```
+`Output: "111"`.
 
 ## License
 
