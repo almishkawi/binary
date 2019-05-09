@@ -27,19 +27,23 @@ RSpec.describe Binary do
     expect(Binary.number(["1", "10", "11"])).to eq([1,2,3])
   end
 
-  it "takes an integer and returns number of bits in its binary representation" do
+  it "returns number of bits in a number's binary representation" do
     expect(Binary.bits_count(7)).to eq(3)
   end
 
-  it "takes an integer and returns number of ones in its binary representation" do
+  it "returns number of ones in a number's binary representation" do
     expect(Binary.ones_count(7)).to eq(3)
   end
 
-  it "takes an integer and returns number of zeros in its binary representation" do
+  it "returns number of zeros in a number's binary representation" do
     expect(Binary.zeros_count(9)).to eq(2)
   end
 
-  it "takes a number and returns an array of binaires of prime numbers" do
+  it "returns an array of binaires of prime numbers" do
     expect(Binary.prime(9)).to eq(["10", "11", "101", "111"])
+  end
+
+  it "returns a binary representation of a random number between 1 and the given number" do
+    expect(["1", "10", "11"]).to include(Binary.random(3))
   end
 end
