@@ -28,15 +28,15 @@ RSpec.describe Binary do
   end
 
   it "takes an integer and returns number of bits in its binary representation" do
-    expect(Binary.bits(7)).to eq(3)
+    expect(Binary.bits_count(7)).to eq(3)
   end
 
   it "takes an integer and returns number of ones in its binary representation" do
-    expect(Binary.ones(7)).to eq(3)
+    expect(Binary.ones_count(7)).to eq(3)
   end
 
   it "takes an integer and returns number of zeros in its binary representation" do
-    expect(Binary.zeros(9)).to eq(2)
+    expect(Binary.zeros_count(9)).to eq(2)
   end
 
   it "takes a number and returns an array of binaires of prime numbers" do
